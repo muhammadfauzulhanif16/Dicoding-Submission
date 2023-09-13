@@ -1,0 +1,6 @@
+n{
+  "arrowParens": "always",
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "semi": false
+}
