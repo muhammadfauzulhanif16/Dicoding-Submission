@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Sunshiney&display=swap");
+
+* {
+  user-select: none;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.glass,
+#profile #social-media a:hover,
+#dropdown-menu a:hover,
+#place-to-live > a:hover,
+#dropdown-menu {
+  backdrop-filter: blur(4px) saturate(200%);
+  -webkit-backdrop-filter: blur(4px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.5);
+}
+
+header {
+  justify-content: space-around;
+  height: 4rem;
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  color: white;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* hero carousel */
+#hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+#hero-landing {
+  display: flex;
+}
+
+#hero-landing > div {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hero-landing > div > h1 {
+  margin: 0 1rem;
+  font-family: "Sunshiney", cursive;
+  font-size: 6rem;
+}
+
+#hero-landing > div > p {
+  font-weight: 600;
+  margin: 1rem;
+  text-align: center;
+}
+
+#place-to-live {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#place-to-live > a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px white solid;
+}
+
+#hero-landing > img {
+  width: calc(100% / 3);
+  height: 100vh;
+  object-fit: cover;
+}
+
+#hero .hero-item,
+#hero .hero-item-hidden {
+  display: none;
+}
+
+#hero .hero-item > img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#hero .carousel-item {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+#hero .carousel-item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#hero .carousel-item img {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 50%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+#hero .carousel-item > .detail {
+  padding-left: 8rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#hero .carousel-item > .detail > h1 {
+  margin-bottom: 1rem;
+}
+
+#hero .hero-item-visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+#hero #hero-actions {
+  z-index: 1;
+  display: flex;
+  width: 8rem;
+  left: 50%;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+#hero > #hero-actions > i {
+  border: 2px white solid;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+#hero #hero-actions i #prev {
+  margin-left: 20px;
+}
+
+#hero #hero-actions i #next {
+  margin-right: 20px;
+}
+/* hero carousel */
+
+/* profile */
+#toggle-profile {
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#toggle-profile.open {
+  transform: rotate(180deg);
+}
+
+#toggle-profile-container {
+  display: flex;
+  align-items: center;
+}
+
+#toggle-profile-container > p {
+  transform: rotate(90deg);
+}
+
+aside {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  transform: translateY(-50%);
+  top: 50%;
+  transition: all 0.4s ease-in-out;
+  left: -234px;
+  z-index: 1;
+}
+
+aside.active {
+  left: 0;
+}
+
+#profile {
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#profile p {
+  margin: 1rem 0;
+}
+
+#profile img {
+  border-radius: 1rem;
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+#profile #social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#profile #social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+/* profile */
+
+/* place to live dropdown */
+#dropdown {
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+#dropdown > #dropdown-btn {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+}
+
+#chevron-down .open {
+  transform: rotate(-180deg);
+}
+
+#chevron-down {
+  transition: all 0.4s ease-in-out;
+  margin-left: 1rem;
+}
+
+#dropdown-menu {
+  /* top: 0; */
+  opacity: 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+}
+
+#dropdown-menu > a {
+  margin: 0.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+#dropdown-menu.show {
+  opacity: 1;
+}
+/* place to live dropdown */
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 48em) {
+  header {
+    justify-content: space-between;
+  }
+
+  #hero-landing > div {
+    height: 75vh;
+  }
+
+  #hero-landing > div > p {
+    margin: 2rem;
+  }
+
+  #place-to-live {
+    width: 80%;
+  }
+
+  aside {
+    top: 75%;
+  }
+
+  #hero .carousel-item {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  #hero .carousel-item img {
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item div {
+    padding: 0 2rem;
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item p {
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item > .detail {
+    padding-left: 2rem;
+    width: 100%;
+    /* height: 100%; */
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  header {
+    justify-content: space-between;
+  }
+
+  #hero-landing > div {
+    height: 75vh;
+  }
+
+  #hero-landing > div > p {
+    margin: 2rem;
+  }
+
+  #place-to-live {
+    width: 80%;
+  }
+
+  aside {
+    top: 75%;
+  }
+
+  #hero .carousel-item {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  #hero .carousel-item img {
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item div {
+    padding: 0 2rem;
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item p {
+    width: 100%;
+    height: 50%;
+  }
+
+  #hero .carousel-item > .detail {
+    padding-left: 2rem;
+    width: 100%;
+    /* height: 100%; */
+    justify-content: start;
+  }
+}
