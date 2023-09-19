@@ -1,0 +1,47 @@
+{
+  "name": "open-music-api",
+  "author": "Muhammad Fauzul Hanif <muhammadfauzulhanif2230511102@ummi.ac.id>",
+  "contributors": [
+    "Muhammad Fauzul Hanif <muhammadfauzulhanif2230511102@ummi.ac.id>"
+  ],
+  "version": "2.0.0",
+  "license": "ISC",
+  "keywords": [
+    "api",
+    "open",
+    "music",
+    "app",
+    "server",
+    "hapi",
+    "js"
+  ],
+  "description": "API for open music app server with Hapi JS",
+  "scripts": {
+    "start-prod": "NODE_ENV=production node ./src/server.js",
+    "start-dev": "nodemon ./src/server.js",
+    "lint": "eslint ./src",
+    "migrate": "node-pg-migrate"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/jwt": "^3.2.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "joi": "^17.10.1",
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.11.3",
+    "uid": "^2.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
